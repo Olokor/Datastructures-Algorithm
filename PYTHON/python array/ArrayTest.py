@@ -24,6 +24,15 @@ class MyTestCase(unittest.TestCase):
     def test_if_delete_method_raise_indexerror_exception(self):
         self.assertRaises(IndexError, array.delete, 6)
 
+    def test_if_get_method_exists(self):
+        array.get(2)
+    def test_if_get_method_raise_indexerror_exception(self):
+        self.assertRaises(IndexError, array.get, 6)
+
+    def test_if_get_method_get_right_value_at_given_index(self):
+        array.insert(2, "chidinma")
+        self.assertEqual("chidinma", array.get(2))
+
 
 
 if __name__ == '__main__':

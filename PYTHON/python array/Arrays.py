@@ -20,6 +20,9 @@ class Arrays:
     def delete(self, index:int):
         if self.is_index_out_of_range(index):
             raise IndexError("Index out of range")
+
+        if self.array[index] is None:
+            return
         self.array[index] = None
         return self.successful_message()
 
